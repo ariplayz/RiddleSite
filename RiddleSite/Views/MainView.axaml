@@ -31,24 +31,25 @@
                 </StackPanel>
             </Border>
             
-            <TextBlock Margin="0 10 0 0" Foreground="{DynamicResource GreyGradientBrush}" HorizontalAlignment="Center" VerticalAlignment="Top" Classes="bold" FontSize="50">Hello</TextBlock>
-            <TextBlock Margin="0 30 0 20" TextAlignment="Center" HorizontalAlignment="Center" xml:space="preserve">This is a multi-line display
-that has returns in it.
-The text block respects the line 
-as set out in XAML.</TextBlock>
-            
-            <TextBlock Margin="0 0 0 0" TextAlignment="Center" HorizontalAlignment="Center" xml:space="preserve" VerticalAlignment="Top">Hello there, 
-hello there
-hi 
-hello there 
-Boo</TextBlock>
-            
-            <Button Click="GetRiddleButton" HorizontalAlignment="Center" Background="{DynamicResource GreyGradientBrush}" Height="35" Width="110" Foreground="{DynamicResource SecondaryForeground}">
-                <TextBlock TextAlignment="Center" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="{DynamicResource SecondaryForeground}">Get Riddle</TextBlock>
-            </Button>
-            
-            
+            <Border Background="Transparent" IsVisible="{Binding ShowInitialPart}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <StackPanel Background="Transparent" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <TextBlock Margin="0 10 0 0" Foreground="{DynamicResource GreyGradientBrush}" HorizontalAlignment="Center" VerticalAlignment="Top" Classes="bold" FontSize="50">Hello</TextBlock>
+                                    <TextBlock Margin="0 30 0 20" TextAlignment="Center" HorizontalAlignment="Center" xml:space="preserve">This is a multi-line display
+                    that has returns in it.
+                    The text block respects the line 
+                    as set out in XAML.</TextBlock>
+                                
+                                    <TextBlock Margin="0 0 0 0" TextAlignment="Center" HorizontalAlignment="Center" xml:space="preserve" VerticalAlignment="Top">Hello there, 
+                    hello there
+                    hi 
+                    hello there 
+                    Boo</TextBlock>
+                                
+                                    <Button Click="GetRiddleButton" HorizontalAlignment="Center" Background="{DynamicResource GreyGradientBrush}" Height="35" Width="110" Foreground="{DynamicResource SecondaryForeground}">
+                                        <TextBlock TextAlignment="Center" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="{DynamicResource SecondaryForeground}">Get Riddle</TextBlock>
+                                    </Button>
+                </StackPanel>
+            </Border>
         </StackPanel>
     </ScrollViewer>
-    
 </UserControl>

@@ -13,15 +13,29 @@ public partial class MainView : UserControl
     }
     private void GetRiddleButton(object? sender, RoutedEventArgs e)
     {
-        MainViewModel.showVerifyQuestion = true;
+        if (DataContext is MainViewModel vm)
+        {
+            vm.ShowVerifyQuestion = true;
+            vm.ShowInitialPart = false;
+            vm.ShowRiddle = false;
+        }
     }
 
     private void VerifyAlbaButton(object? sender, RoutedEventArgs e)
     {
-        if (MainViewModel.verifyAnswer1 == "10/30/2025" && (MainViewModel.verifyAnswer2 == "sweetie" || MainViewModel.verifyAnswer2 == "Sweetie" || MainViewModel.verifyAnswer2 == "sweetheart" || MainViewModel.verifyAnswer2 == "Sweetheart"))
+        if (DataContext is not MainViewModel vm)
+            return;
+
+        var a1 = vm.VerifyAnswer1?.Trim();
+        var a2 = vm.VerifyAnswer2?.Trim();
+
+        if (a1 == "10/30/2025" &&
+            (a2 == "sweetie" || a2 == "Sweetie" || a2 == "sweetheart" || a2 == "Sweetheart"))
         {
-            MainViewModel.showRiddle = true;
-        } 
+            vm.ShowRiddle = true;
+            vm.ShowInitialPart = false;
+            vm.ShowVerifyQuestion = false;
+        }
     }
     
 }

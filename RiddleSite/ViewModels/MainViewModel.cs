@@ -4,8 +4,20 @@ namespace RiddleSite.ViewModels;
 
 public partial class MainViewModel : ViewModelBase
 {
-    [ObservableProperty] public static bool showVerifyQuestion = false;
-    [ObservableProperty] public static bool showRiddle = false;
-    [ObservableProperty] public static string verifyAnswer1 = "";
-    [ObservableProperty] public static string verifyAnswer2 = "";
+    // Use instance observable properties so Avalonia bindings receive notifications.
+    [ObservableProperty]
+    private bool showVerifyQuestion = false;
+
+    [ObservableProperty]
+    private bool showRiddle = false;
+
+    [ObservableProperty]
+    private string verifyAnswer1 = string.Empty;
+
+    [ObservableProperty]
+    private string verifyAnswer2 = string.Empty;
+
+    [ObservableProperty] 
+    private bool showInitialPart = true;
+
 }
