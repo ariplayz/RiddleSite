@@ -3,6 +3,8 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="RiddleSite/App.axaml" value="RiddleSite.Desktop/RiddleSite.Desktop.csproj" />
+        <entry key="RiddleSite/AppDefaultStyles.axaml" value="RiddleSite.Desktop/RiddleSite.Desktop.csproj" />
         <entry key="RiddleSite/Views/MainView.axaml" value="RiddleSite.Desktop/RiddleSite.Desktop.csproj" />
       </map>
     </option>

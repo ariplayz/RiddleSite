@@ -11,5 +11,32 @@
 
     <Application.Styles>
         <FluentTheme />
+        <StyleInclude Source="/AppDefaultStyles.axaml"></StyleInclude>
     </Application.Styles>
+             
+    <Application.Resources>
+        <SolidColorBrush x:Key="PrimaryForeground">#020817</SolidColorBrush>
+        <LinearGradientBrush x:Key="PrimaryBackground" StartPoint="50%,0%" EndPoint="50%,100%">
+            <GradientStop Color="#ff3f9c" Offset="0.0"/>
+            <GradientStop Color="#ff3f42" Offset="1.0"/>
+        </LinearGradientBrush>
+                 
+        <LinearGradientBrush x:Key="GreyGradientBrush" StartPoint="0%, 0%" EndPoint="100%, 0%">
+            <GradientStop Offset="0" Color="#030918"></GradientStop>
+            <GradientStop Offset="1" Color="#5b002a"></GradientStop>
+        </LinearGradientBrush>
+                 
+        <SolidColorBrush x:Key="PrimaryHoverBackground">#041132</SolidColorBrush>
+        <SolidColorBrush x:Key="PrimaryHoverForeground">White</SolidColorBrush>
+        <SolidColorBrush x:Key="SecondaryForeground">#6ea3b8</SolidColorBrush>
+                 
+                 
+        <FontFamily x:Key="AkkoPro">/Assets/Fonts/Akko-Pro-Regular.ttf#Akko Pro</FontFamily>
+        <FontFamily x:Key="AkkoProBold">/Assets/Fonts/Akko-Pro-Bold.ttf#Akko Pro</FontFamily>
+        <FontFamily x:Key="Phosphor">/Assets/Fonts/Phosphor.ttf#Phosphor</FontFamily>
+        <FontFamily x:Key="PhosphorFill">/Assets/Fonts/Phosphor-Fill.ttf#Phosphor-Fill</FontFamily>
+        <FontFamily x:Key="JetBrainsMono">/Assets/Fonts/JetBrainsMono-Regular.ttf#JetBrains Mono</FontFamily>
+                 
+    </Application.Resources>
+             
 </Application>
