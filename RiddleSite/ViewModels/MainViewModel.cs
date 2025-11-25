@@ -16,6 +16,9 @@ public partial class MainViewModel : ViewModelBase
 
     [ObservableProperty]
     private string verifyAnswer2 = string.Empty;
+    
+    [ObservableProperty]
+    private string verifyAnswer3 = string.Empty;
 
     [ObservableProperty] 
     private bool showInitialPart = true;
