@@ -1,51 +1,17 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFrameworks>net9.0;net9.0-browser</TargetFrameworks>
-    <OutputType>Exe</OutputType>
-    <Nullable>enable</Nullable>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk.WebAssembly">
+    <PropertyGroup>
+        <TargetFramework>net9.0-browser</TargetFramework>
+        <OutputType>Exe</OutputType>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <Nullable>enable</Nullable>
+        <WasmBuildNative>true</WasmBuildNative>
+    </PropertyGroup>
 
-  <!-- Browser (WASM) target specific settings/packages -->
-  <PropertyGroup Condition="'$(TargetFramework)'=='net9.0-browser'">
-    <WasmBuildNative>true</WasmBuildNative>
-  </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Avalonia.Browser"/>
+    </ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)'=='net9.0-browser'">
-    <PackageReference Include="Avalonia.Browser" />
-  </ItemGroup>
-
-  <!-- Server (Kestrel) target references -->
-  <ItemGroup Condition="'$(TargetFramework)'=='net9.0'">
-    <FrameworkReference Include="Microsoft.AspNetCore.App" />
-  </ItemGroup>
-
-  <!-- Ensure the correct Program file is compiled per target -->
-  <ItemGroup>
-    <Compile Remove="Program.cs" />
-    <Compile Remove="Program.Browser.cs" />
-    <Compile Remove="Program.Server.cs" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)'=='net9.0-browser'">
-    <Compile Include="Program.Browser.cs" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)'=='net9.0'">
-    <Compile Include="Program.Server.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\RiddleSite\RiddleSite.csproj" />
-  </ItemGroup>
-
-  <!-- Ensure configuration files are included in build/publish output -->
-  <ItemGroup>
-    <Content Include="appsettings*.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="Always" />
-  </ItemGroup>
-
-  <!-- When publishing the server target, also publish the browser target into wwwroot -->
-  <Target Name="PublishBrowserToServer" AfterTargets="Publish" Condition="'$(TargetFramework)'=='net9.0'">
-    <Message Text="Publishing browser assets into server wwwroot..." Importance="high" />
-    <MakeDir Directories="$(PublishDir)wwwroot" />
-    <Exec Command='dotnet publish &quot;$(MSBuildProjectFullPath)&quot; -c $(Configuration) -f net9.0-browser -o &quot;$(PublishDir)wwwroot&quot;' />
-  </Target>
+    <ItemGroup>
+        <ProjectReference Include="..\RiddleSite\RiddleSite.csproj"/>
+    </ItemGroup>
 </Project>

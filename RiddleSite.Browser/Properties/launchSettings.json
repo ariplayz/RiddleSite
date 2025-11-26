@@ -1,24 +1,12 @@
 {
-  "$schema": "https://json.schemastore.org/launchsettings.json",
-  "profiles": {
+    "profiles": {
     "RiddleSite.Browser": {
-      "commandName": "Project",
-      "dotnetRunMessages": true,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "applicationUrl": "https://localhost:7169;http://localhost:5235",
-      "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
-      "commandLineArgs": "--framework net9.0-browser"
-    },
-    "RiddleSite.Browser (Server)": {
-      "commandName": "Project",
-      "dotnetRunMessages": true,
-      "applicationUrl": "https://localhost:7169;http://localhost:5235",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "commandLineArgs": "--framework net9.0"
+        "commandName": "Project",
+        "environmentVariables": {
+          "ASPNETCORE_ENVIRONMENT": "Development"
+        },
+        "applicationUrl": "https://localhost:7169;http://localhost:5235",
+        "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}"
+      }
     }
-  }
 }
