@@ -23,4 +23,7 @@ public partial class MainViewModel : ViewModelBase
     [ObservableProperty] 
     private bool showInitialPart = true;
 
+    [ObservableProperty] 
+    private bool showIncorrectErrorMessage = false;
+
 }

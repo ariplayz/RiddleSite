@@ -12,12 +12,33 @@
     <vm:MainViewModel />
   </Design.DataContext>
  
-    <ScrollViewer VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-        <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="{DynamicResource PrimaryBackground}">
-           
-            <Border Background="{DynamicResource PrimaryBackground}" IsVisible="{Binding ShowVerifyQuestion}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <ScrollViewer VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="{DynamicResource PrimaryBackground}">
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Background="Transparent">
+            
+            <Border Background="Transparent" IsVisible="{Binding ShowInitialPart}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <StackPanel Background="Transparent" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <TextBlock Margin="0 10 0 0" Foreground="{DynamicResource GreyGradientBrush}" HorizontalAlignment="Center" VerticalAlignment="Top" Classes="bold" FontSize="50">Hi Alba :)</TextBlock>
+                    <TextBlock Margin="0 30 0 0" TextAlignment="Center" HorizontalAlignment="Center" xml:space="preserve">
+Hi there :)
+I decided to make a little riddle/scavenger hunt
+to lead you to your present.
+</TextBlock>
+                                
+                    <TextBlock Margin="0 0 0 0" TextAlignment="Center" HorizontalAlignment="Center" xml:space="preserve" VerticalAlignment="Top">
+First, you will have to answer a couple questions :)
+You will problably be able to figure out
+approximately when I made this based on them lol.
+</TextBlock>
+                                
+                    <Button Click="GetRiddleButton" HorizontalAlignment="Center" Background="{DynamicResource GreyGradientBrush}" Height="35" Width="180" Foreground="{DynamicResource SecondaryForeground}">
+                        <TextBlock TextAlignment="Center" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="{DynamicResource SecondaryForeground}">Answer Questions</TextBlock>
+                    </Button>
+                </StackPanel>
+            </Border>
+            
+            <Border Background="Transparent" IsVisible="{Binding ShowVerifyQuestion}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0">
-                    <TextBlock TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" Classes="bold" FontSize="40">Are you Alba?</TextBlock>
+                    <TextBlock Foreground="{DynamicResource GreyGradientBrush}" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" Classes="bold" FontSize="50">Are you Alba?</TextBlock>
                     
                     <TextBlock TextAlignment="Center" HorizontalAlignment="Center" Margin="0 20 0 10">When did we start dating?</TextBlock>
                     <TextBox Width="200" HorizontalAlignment="Center" Text="{Binding VerifyAnswer1, Mode=TwoWay}"></TextBox>
@@ -34,26 +55,21 @@
                 </StackPanel>
             </Border>
             
-            <Border Background="{DynamicResource PrimaryBackground}" IsVisible="{Binding ShowInitialPart}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                <StackPanel Background="Transparent" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <TextBlock Margin="0 10 0 0" Foreground="{DynamicResource GreyGradientBrush}" HorizontalAlignment="Center" VerticalAlignment="Top" Classes="bold" FontSize="50">Hi Alba :)</TextBlock>
-                                    <TextBlock Margin="0 30 0 0" TextAlignment="Center" HorizontalAlignment="Center" xml:space="preserve">
-Hi there :)
-I decided to make a little riddle/scavenger hunt
-to lead you to your present.
+            <Border Background="Transparent" IsVisible="{Binding ShowIncorrectErrorMessage}" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <TextBlock Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource PrimaryForeground}">Incorrect answers!!</TextBlock>
+            </Border>
+            
+            <Border IsVisible="{Binding ShowRiddle}" Background="Transparent" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0">
+                    <TextBlock Foreground="{DynamicResource GreyGradientBrush}" Classes="bold" FontSize="50" TextAlignment="Center" HorizontalAlignment="Center" Margin="0 20 0 10">Here's the riddle!</TextBlock>
+                    
+                    <TextBlock Margin="0 0 0 0" TextAlignment="Center" HorizontalAlignment="Center" xml:space="preserve" VerticalAlignment="Top">
+Riddle goes here :)
 </TextBlock>
-                                
-                                    <TextBlock Margin="0 0 0 0" TextAlignment="Center" HorizontalAlignment="Center" xml:space="preserve" VerticalAlignment="Top">
-First, you will have to answer a couple questions :)
-You will problably be able to figure out
-approximately when I made this based on them lol.
-</TextBlock>
-                                
-                                    <Button Click="GetRiddleButton" HorizontalAlignment="Center" Background="{DynamicResource GreyGradientBrush}" Height="35" Width="180" Foreground="{DynamicResource SecondaryForeground}">
-                                        <TextBlock TextAlignment="Center" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="{DynamicResource SecondaryForeground}">Answer Questions</TextBlock>
-                                    </Button>
+                    
                 </StackPanel>
             </Border>
+            
         </StackPanel>
     </ScrollViewer>
 </UserControl>
