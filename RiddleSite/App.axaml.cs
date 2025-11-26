@@ -4,6 +4,7 @@ using Avalonia.Data.Core;
 using Avalonia.Data.Core.Plugins;
 using System.Linq;
 using Avalonia.Markup.Xaml;
+using System.Diagnostics.CodeAnalysis;
 using RiddleSite.ViewModels;
 using RiddleSite.Views;
 
@@ -39,6 +40,10 @@ public partial class App : Application
         base.OnFrameworkInitializationCompleted();
     }
 
+    [UnconditionalSuppressMessage(
+        category: "Trimming",
+        checkId: "IL2026",
+        Justification = "Accessing BindingPlugins.DataValidators is intentional to remove DataAnnotationsValidationPlugin at startup. This limited use is compatible with trimming in our app.")]
     private void DisableAvaloniaDataAnnotationValidation()
     {
         // Get an array of plugins to remove
