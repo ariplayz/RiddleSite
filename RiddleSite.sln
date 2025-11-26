@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiddleSite.Desktop", "Riddl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiddleSite.Browser", "RiddleSite.Browser\RiddleSite.Browser.csproj", "{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiddleSite.Web", "RiddleSite.Web\RiddleSite.Web.csproj", "{4B4C0D7C-3B80-4C3C-8B1C-3B6E3F9F2C6E}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3DA99C4E-89E3-4049-9C22-0A7EC60D83D8}"
 	ProjectSection(SolutionItems) = preProject
 		Directory.Packages.props = Directory.Packages.props
@@ -34,10 +32,6 @@ Global
 		{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4B4C0D7C-3B80-4C3C-8B1C-3B6E3F9F2C6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4B4C0D7C-3B80-4C3C-8B1C-3B6E3F9F2C6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4B4C0D7C-3B80-4C3C-8B1C-3B6E3F9F2C6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4B4C0D7C-3B80-4C3C-8B1C-3B6E3F9F2C6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
