@@ -29,12 +29,12 @@ public partial class MainView : UserControl
             return;
 
         var a1 = vm.VerifyAnswer1?.Trim();
-        var a2 = vm.VerifyAnswer2?.Trim();
-        var a3 = vm.VerifyAnswer3?.Trim();
+        var a2 = vm.VerifyAnswer2?.Trim().ToLower();
+        var a3 = vm.VerifyAnswer3?.Trim().ToLower();
 
         if (a1 == "10/30/2025" &&
-            (a2 == "sweetie" || a2 == "Sweetie" || a2 == "sweetheart" || a2 == "Sweetheart") &&
-            (a3 == "homie" || a3 == "Homie" || a3 == "home slice" || a3 == "Home Slice" || a3 == "homeslice" || a3 == "Homeslice" || a3 == "Home slice" || a3 == "home Slice"))
+            (a2 == "67" || a2 == "6 7" || a2 == "six seven") &&
+            (a3 == "max verstappen"))
         {
             // Ensure any prior error message is hidden when verification succeeds
             vm.ShowIncorrectErrorMessage = false;

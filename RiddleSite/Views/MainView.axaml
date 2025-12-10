@@ -26,8 +26,9 @@ to lead you to your present.
                                 
                     <TextBlock Margin="0 0 0 0" TextAlignment="Center" HorizontalAlignment="Center" xml:space="preserve" VerticalAlignment="Top">
 First, you will have to answer a couple questions :)
-You will problably be able to figure out
-approximately when I made this based on them lol.
+
+
+because why the hell not :D
 </TextBlock>
                                 
                     <Button Click="GetRiddleButton" HorizontalAlignment="Center" Background="{DynamicResource GreyGradientBrush}" Height="35" Width="180" Foreground="{DynamicResource SecondaryForeground}">
@@ -43,10 +44,10 @@ approximately when I made this based on them lol.
                     <TextBlock TextAlignment="Center" HorizontalAlignment="Center" Margin="0 20 0 10">When did we start dating?</TextBlock>
                     <TextBox Width="200" HorizontalAlignment="Center" Text="{Binding VerifyAnswer1, Mode=TwoWay}"></TextBox>
                     
-                    <TextBlock TextAlignment="Center" HorizontalAlignment="Center" Margin=" 0 20 0 10">What do I usually call you?</TextBlock>
+                    <TextBlock TextAlignment="Center" HorizontalAlignment="Center" Margin=" 0 20 0 10">What does 0110 0111 mean? (binary hehe)</TextBlock>
                     <TextBox Width="200" HorizontalAlignment="Center" Text="{Binding VerifyAnswer2, Mode=TwoWay}"></TextBox>
                     
-                    <TextBlock TextAlignment="Center" HorizontalAlignment="Center" Margin=" 0 20 0 10">What do you usually call me?</TextBlock>
+                    <TextBlock TextAlignment="Center" HorizontalAlignment="Center" Margin=" 0 20 0 10">TU TU TU TU</TextBlock>
                     <TextBox Width="200" HorizontalAlignment="Center" Text="{Binding VerifyAnswer3, Mode=TwoWay}"></TextBox>
                     
                     <Button Click="VerifyAlbaButton" HorizontalAlignment="Center" Background="{DynamicResource GreyGradientBrush}" Height="35" Width="110" Foreground="{DynamicResource SecondaryForeground}" Margin="0 10 0 0">
