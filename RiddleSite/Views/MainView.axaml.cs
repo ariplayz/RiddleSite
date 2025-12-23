@@ -32,7 +32,7 @@ public partial class MainView : UserControl
         var a2 = vm.VerifyAnswer2?.Trim().ToLower();
         var a3 = vm.VerifyAnswer3?.Trim().ToLower();
 
-        if (a1 == "08/30/2025" &&
+        if ((a1 == "08/30/2025" || a1 == "8/30/2025") &&
             (a2 == "67" || a2 == "6 7" || a2 == "six seven") &&
             (a3 == "max verstappen"))
         {

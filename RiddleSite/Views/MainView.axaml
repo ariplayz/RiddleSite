@@ -65,7 +65,20 @@ because why the hell not :D
                     <TextBlock Foreground="{DynamicResource GreyGradientBrush}" Classes="bold" FontSize="50" TextAlignment="Center" HorizontalAlignment="Center" Margin="0 20 0 10">Here's the riddle!</TextBlock>
                     
                     <TextBlock Margin="0 0 0 0" TextAlignment="Center" HorizontalAlignment="Center" xml:space="preserve" VerticalAlignment="Top">
-Riddle goes here :)
+I start where whispers steep in a cup,
+A quiet retreat where calm fills you up.
+But though it feels like the perfect scene,
+Your prize is not where the leaves turn green.
+Seek next where time is trapped in glass,
+Where flavors linger as moments pass.
+Yet even here, the hour runs dry—
+Your treasure waits where waters lie.
+Go where the sun and breezes play,
+Past ripples that dance in a tranquil way.
+Beyond the pool where koi fish glide,
+A bridge stands watch with bushes beside.
+There, in the shade where secrets keep,
+Your Christmas joy is buried deep.
 </TextBlock>
                     
                 </StackPanel>
